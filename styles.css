@@ -1,0 +1,92 @@
+/* ==========================================================================
+   EXICAR - Confecciones & Sublimaciones
+   Estilos limpios, directos y adaptados a la identidad de marca
+   ========================================================================== */
+
+:root {
+  --exicar-black: #111827;
+  --exicar-cyan: #0088ff;
+  --exicar-magenta: #e6007e;
+  --exicar-yellow: #facc15;
+  --light-bg: #f8fafc;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--light-bg);
+  color: #1f2937;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Efectos de Barra de Navegación */
+.glass-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 2px solid #f1f5f9;
+}
+
+/* Tarjetas de Producto */
+.product-card {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #ffffff;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+}
+
+/* Pestañas de categoría activas */
+.category-tab-active {
+  background-color: var(--exicar-black) !important;
+  color: #ffffff !important;
+  border-color: var(--exicar-black) !important;
+  box-shadow: 0 4px 12px rgba(17, 24, 39, 0.25);
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 40;
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 12px 28px rgba(34, 197, 94, 0.55);
+}
+
+/* Cinta de colores CMYK de EXICAR */
+.cmyk-strip {
+  height: 4px;
+  background: linear-gradient(90deg, #0088ff 0%, #0088ff 25%, #e6007e 25%, #e6007e 50%, #facc15 50%, #facc15 75%, #111827 75%, #111827 100%);
+}
+
+/* Modal Backdrop */
+.modal-backdrop-blur {
+  background-color: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+/* Transición de Toast */
+#toastNotification {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
